@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Погодное приложение с прогнозом на 5 дней и темной темой">
+    <title>Weather App - Прогноз погоды</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⛅</text></svg>">
+</head>
+<body>
+    <div class="app-container">
+        <header class="header">
+            <div class="header-container">
+                <div class="logo">
+                    <span class="logo-icon">🌤️</span>
+                    <h1>Weather<span>App</span></h1>
+                </div>
+                <div class="header-controls">
+                    <button class="theme-toggle" id="themeToggle" aria-label="Переключить тему">
+                        <span class="theme-icon-dark">🌙</span>
+                        <span class="theme-icon-light">☀️</span>
+                    </button>
+                </div>
+            </div>
+            <div class="search-section">
+                <form id="searchForm" class="search-form">
+                    <div class="search-wrapper">
+                        <input 
+                            type="text" 
+                            id="cityInput" 
+                            placeholder="Поиск города... (например: Moscow, London, Tokyo)"
+                            autocomplete="off"
+                        >
+                        <button type="submit" class="search-btn">
+                            <span>🔍</span>
+                            <span class="btn-text">Найти</span>
+                        </button>
+                    </div>
+                    <div id="errorMsg" class="error-message"></div>
+                </form>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <section class="favorites-section" id="favoritesSection">
+                <div class="section-header">
+                    <h2>⭐ Избранные города</h2>
+                    <button id="clearFavoritesBtn" class="clear-btn">Очистить</button>
+                </div>
+                <div id="favoritesList" class="favorites-grid"></div>
+            </section>
+
+            <section class="current-weather-section" id="currentWeatherSection">
+                <div id="currentWeather" class="current-weather-card">
+                    <div class="weather-placeholder">
+                        <div class="placeholder-icon">🏙️</div>
+                        <p>Введите название города для отображения погоды</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="forecast-section" id="forecastSection">
+                <h2>📅 Прогноз на 5 дней</h2>
+                <div id="forecast" class="forecast-container"></div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <p>Данные предоставлены <a href="https://openweathermap.org/" target="_blank">OpenWeatherMap</a></p>
+                <p>© 2026 Weather App</p>
+            </div>
+        </footer>
+    </div>
+
+    <div id="loadingOverlay" class="loading-overlay">
+        <div class="spinner"></div>
+        <p>Загрузка данных...</p>
+    </div>
+</body>
+</html>
