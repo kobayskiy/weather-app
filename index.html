@@ -81,5 +81,15 @@
         <div class="spinner"></div>
         <p>Загрузка данных...</p>
     </div>
+
+    <script>
+    if (typeof CONFIG === 'undefined') {
+        console.warn('Создайте файл js/config.js с вашим API ключом');
+        alert('Создайте файл js/config.js с вашим API ключом OpenWeatherMap');
+    }
+    </script>
+    <script src="js/config.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/app.js"></script>
 </body>
 </html>
