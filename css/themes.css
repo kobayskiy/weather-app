@@ -35,3 +35,15 @@ body.dark-theme .clear-btn:hover {
 body.dark-theme .loading-overlay {
     background: rgba(0, 0, 0, 0.85);
 }
+
+body.dark-theme .fav-btn {
+    background: transparent;
+    border-color: #475569;
+    color: #f1f5f9;
+}
+
+body.dark-theme .fav-btn.active {
+    background: var(--accent-color);
+    border-color: var(--accent-color);
+    color: white;
+}
