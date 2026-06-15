@@ -1,0 +1,37 @@
+body.dark-theme {
+    --bg-primary: #0f172a;
+    --bg-secondary: #1e293b;
+    --bg-card: #1e293b;
+    --bg-input: #334155;
+    --text-primary: #f1f5f9;
+    --text-secondary: #cbd5e1;
+    --text-muted: #94a3b8;
+    --border-color: #334155;
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.3);
+    --shadow-md: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+body.dark-theme .search-wrapper input {
+    color: var(--text-primary);
+}
+
+body.dark-theme .search-wrapper input::placeholder {
+    color: var(--text-muted);
+}
+
+body.dark-theme .favorite-chip {
+    background: #334155;
+}
+
+body.dark-theme .forecast-card {
+    background: #334155;
+}
+
+body.dark-theme .clear-btn:hover {
+    background: var(--error-color);
+    color: white;
+}
+
+body.dark-theme .loading-overlay {
+    background: rgba(0, 0, 0, 0.85);
+}
